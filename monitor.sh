@@ -15,7 +15,7 @@ else
 			"--memory")
 				memory_check;;
 			"--disk")
-				echo "disk";;
+				disk_check;;
 			*)
 				echo "Invalid argument: $ARG"
 				return 1
@@ -33,5 +33,13 @@ cpu_check(){
 memory_check(){
  echo "Memory usage: $(free -m | awk '/Mem:/ {printf("%.0f%%\n", $3/$2 * 100)}')"
 }
+
+disk_check(){
+ echo "Disk usage: $(df -h / | awk 'NR==2 {print $5}')"
+}
+
+
+
+
 
 process_args "$@"
