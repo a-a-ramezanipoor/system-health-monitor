@@ -9,7 +9,7 @@ else
 	for ARG in "$@"; do
 		case "$ARG" in
 			"--help")
-				echo "help";;
+				show_help;;
 			"--cpu")
 				cpu_check;;
 			"--memory")
@@ -38,6 +38,15 @@ disk_check(){
  echo "Disk usage: $(df -h / | awk 'NR==2 {print $5}')"
 }
 
+show_help() {
+    echo "Usage: ./monitor.sh [OPTIONS]"
+    echo ""
+    echo "Options:"
+    echo "  --help       Show this help message"
+    echo "  --cpu        Show CPU usage"
+    echo "  --memory     Show memory usage"
+    echo "  --disk       Show disk usage"
+}
 
 
 
