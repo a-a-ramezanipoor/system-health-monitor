@@ -11,7 +11,7 @@ else
 			"--help")
 				echo "help";;
 			"--cpu")
-				echo "cpu";;
+				cpu_check;;
 			"--memory")
 				echo "memory";;
 			"--disk")
@@ -23,6 +23,11 @@ else
 	done
 fi
 
+}
+
+
+cpu_check(){
+ echo "CPU usage: $(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')"
 }
 
 process_args "$@"
