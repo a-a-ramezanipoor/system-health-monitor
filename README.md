@@ -54,7 +54,7 @@ Examples
 ./monitor.sh --help
 
 ---
-
+```
 ## How It Works
 
 The script uses standard Linux commands:
