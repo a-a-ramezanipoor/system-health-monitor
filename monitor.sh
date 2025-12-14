@@ -13,7 +13,7 @@ else
 			"--cpu")
 				cpu_check;;
 			"--memory")
-				echo "memory";;
+				memory_check;;
 			"--disk")
 				echo "disk";;
 			*)
@@ -28,6 +28,10 @@ fi
 
 cpu_check(){
  echo "CPU usage: $(top -bn1 | grep "Cpu(s)" | awk '{print $2 + $4}')"
+}
+
+memory_check(){
+ echo "Memory usage: $(free -m | awk '/Mem:/ {printf("%.0f%%\n", $3/$2 * 100)}')"
 }
 
 process_args "$@"
