@@ -71,14 +71,12 @@ Arguments are processed via the `process_args` function, allowing flexible and i
 
 - Lightweight alternative to full monitoring tools
 - No dependencies beyond standard Linux utilities
-- Perfect for learning **Bash scripting** and **system monitoring basics**
-- Resume-worthy: demonstrates **command-line scripting, system metrics analysis, and automation skills**
 
 ---
 
 ## Author
 
-**Your Name**  
+Amir-Abbas Ramezanipoor 
 Email: a.a.ramezanipoor@gmail.com
 GitHub: github.com/a-a-ramezanipoor
 
